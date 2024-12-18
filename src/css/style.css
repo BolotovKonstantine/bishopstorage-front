@@ -157,6 +157,7 @@ button {
 }
 .products {
   padding: 0.5em;
+  align-items: center;
 }
 .product-list {
   display: flex;
@@ -412,6 +413,31 @@ header {
 }
 .logo {
   overflow: visible; /* Allow the text to fully appear */
+}
+.products {
+  text-align: center; /* Centers inline elements inside the products section */
+  padding: 1em 0; /* Adds spacing to the section for better visual alignment */
+}
+
+.products h1 {
+  margin: 0; /* Removes default h1 margins for cleaner alignment */
+}
+
+.products h1 a {
+  color: var(--secondary-color); /* Matches link text to secondary color */
+  text-decoration: none; /* Removes default underline */
+  font-size: var(--large-font); /* Slightly larger font for emphasis */
+  font-weight: bold; /* Makes the text bold */
+  padding: 0.5em 1em; /* Adds space around the link text */
+  border: 2px solid var(--secondary-color); /* Adds a border around the link */
+  border-radius: 5px; /* Smoothens the corners */
+  display: inline-block; /* Turns the link into a block-like element for padding */
+}
+
+.products h1 a:hover {
+  background-color: var(--secondary-color); /* Changes background on hover */
+  color: white; /* Changes text color to white */
+  text-decoration: underline; /* Adds an underline for emphasis */
 }
 @keyframes cart-bounce {
   0%, 100% {

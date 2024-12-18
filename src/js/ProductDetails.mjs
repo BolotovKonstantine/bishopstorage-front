@@ -1,17 +1,12 @@
 import { getLocalStorage, setLocalStorage, alertMessage, animateCart  } from './utils.mjs';
 
 function productDetailsTemplate(product) {
-  return `<section class="product-detail"> <h3>${product.Brand.Name}</h3>
-    <h2 class="divider">${product.NameWithoutBrand}</h2>
-    <img
-      class="divider"
-      src="${product.Images.PrimaryLarge}"
-      alt="${product.NameWithoutBrand}"
-    />
-    <p class="product-card__price">$${product.FinalPrice}</p>
-    <p class="product__color">${product.Colors[0].ColorName}</p>
+  return `<section class="product-detail"> <h3>${product.title}</h3>
+    <h2 class="divider">${product.description}</h2>
+    <p class="product-card__price">${product.location}</p>
+    <p class="product__color">${product.properties[0]}</p>
     <p class="product__description">
-    ${product.DescriptionHtmlSimple}
+    ${product.properties[1]}
     </p>
     <div class="product-detail__add">
       <button id="addToCart" data-id="${product.Id}">Add to Cart</button>

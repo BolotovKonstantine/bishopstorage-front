@@ -21,7 +21,8 @@ export default class ProductListing {
   async init() {
     // our dataSource will return a Promise...so we can use await to resolve it.
     this.products = await this.dataSource.getData();
-    console.log(this.products[1].id);
+    const propertyNames = Object.keys(this.products[2].properties);
+    console.log(propertyNames);
     // render the list
     this.renderList(this.products);
     //set the title to the current category

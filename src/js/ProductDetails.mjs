@@ -1,13 +1,14 @@
 import { getLocalStorage, setLocalStorage, alertMessage, animateCart  } from './utils.mjs';
 
 function productDetailsTemplate(product) {
+  const propertyNames = Object.keys(product.properties);
+  const propertyValues = Object.values(product.properties);
   return `<section class="product-detail"> <h3>${product.title}</h3>
     <h2 class="divider">${product.description}</h2>
-    <p class="product-card__price">${product.location}</p>
-    <p class="product__color">${product.properties[0]}</p>
-    <p class="product__description">
-    ${product.properties[1]}
-    </p>
+    <p class="product-card__price">Location: ${product.location}</p>
+    <p class="product__prop0">${propertyNames[0]}: ${propertyValues[0]}</p>
+    <p class="product__prop1">${propertyNames[1]}: ${propertyValues[1]}</p>
+    <p class="product__prop2">${propertyNames[2]}: ${propertyValues[2]}</p>
     <div class="product-detail__add">
       <button id="addToCart" data-id="${product.Id}">Add to Cart</button>
       <p></p>
